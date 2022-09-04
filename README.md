@@ -2,7 +2,7 @@
 
 [View Live Site](https://cat-friends-benz.netlify.app/)
 
-My first React website taught by Andrei in his Udemy Senior Web Developer Course.
+My first React website taught by Andrei in his [Udemy Senior Web Developer Course](https://www.udemy.com/course/the-complete-junior-to-senior-web-developer-roadmap/).
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## To run this project
@@ -17,6 +17,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Redux Core](https://react-redux.js.org/)
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk)
 - [Tachyons](https://tachyons.io/)
+- Basic Unit Testing with [Jest](https://jestjs.io/)
 
 ## Show your support
 

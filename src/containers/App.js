@@ -1,13 +1,9 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import SearchBox from "../components/SearchBox";
-import CardList from "../components/CardList";
-import Scroll from "../components/Scroll";
-import ErrorBoundary from "../components/ErrorBoundary";
-import "tachyons";
-import "./App.css";
-
 import { setSearchField, requestCats } from "../actions";
+
+import MainPage from "./MainPage";
+import "./App.css";
 
 const mapStateToProps = (state) => {
   return {
@@ -21,32 +17,12 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
-    onRequestCats: () => requestCats(dispatch),
+    onRequestCats: () => dispatch(requestCats()),
   };
 };
 
-function App({ cats, onRequestCats, searchField, onSearchChange, isPending }) {
-  useEffect(() => {
-    onRequestCats();
-  }, []);
-
-  const filteredCats = cats.filter((cat) => {
-    return cat.name.toLowerCase().includes(searchField.toLowerCase());
-  });
-
-  return isPending ? (
-    <h1 className="tc lh-title">Loading</h1>
-  ) : (
-    <div className="tc">
-      <h1 className="f-headline lh-title main-title">Cat Friends</h1>
-      <SearchBox searchChange={onSearchChange} />
-      <Scroll>
-        <ErrorBoundary>
-          <CardList cats={filteredCats} />
-        </ErrorBoundary>
-      </Scroll>
-    </div>
-  );
+function App(props) {
+  return <MainPage {...props} />;
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

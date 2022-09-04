@@ -9,6 +9,7 @@ const SearchBox = ({ searchfield, searchChange }) => {
         type="search"
         placeholder="search cats"
         onChange={searchChange}
+        data-testid="search-box"
       />
     </div>
   );

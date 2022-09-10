@@ -1,16 +1,18 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import SearchBox from "../components/SearchBox";
 import CardList from "../components/CardList";
 import Scroll from "../components/Scroll";
 import ErrorBoundary from "../components/ErrorBoundary";
+import { Cat } from "./App";
+import { AppProps } from "./App";
 import "tachyons";
 
-function MainPage({ cats, onRequestCats, searchField, onSearchChange, isPending }) {
+function MainPage({ cats, onRequestCats, searchField, onSearchChange, isPending }: AppProps): JSX.Element {
   useEffect(() => {
     onRequestCats();
   }, []);
 
-  const filteredCats = cats.filter((cat) => {
+  const filteredCats = cats.filter((cat: Cat) => {
     return cat.name.toLowerCase().includes(searchField.toLowerCase());
   });
 

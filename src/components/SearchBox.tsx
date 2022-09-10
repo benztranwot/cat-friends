@@ -1,7 +1,11 @@
 import React from "react";
 import "tachyons";
 
-const SearchBox = ({ searchfield, searchChange }) => {
+interface SearchBoxProps {
+  searchChange(event: React.FormEvent<HTMLInputElement>): void;
+}
+
+const SearchBox = ({ searchChange }: SearchBoxProps) => {
   return (
     <div className="pa2">
       <input

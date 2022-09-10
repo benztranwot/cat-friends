@@ -17,7 +17,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Redux Core](https://react-redux.js.org/)
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk)
 - [Tachyons](https://tachyons.io/)
-- Basic Unit Testing with [Jest](https://jestjs.io/)
+
+## Update
+
+- Added basic Unit Testing with [Jest](https://jestjs.io/)
+- Added basic [Typescript](https://www.typescriptlang.org/)
 
 ## Show your support
 

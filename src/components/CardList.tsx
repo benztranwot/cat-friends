@@ -1,7 +1,7 @@
-import React from "react";
 import Card from "./Card";
+import { Cat } from "../containers/App";
 
-const CardList = ({ cats }) => {
+const CardList = ({ cats }: { cats: Array<Cat> }) => {
   // if (true) {
   //   throw new Error("Test Error");
   // }

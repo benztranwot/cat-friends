@@ -5,6 +5,10 @@
 My first React website taught by Andrei in his [Udemy Senior Web Developer Course](https://www.udemy.com/course/the-complete-junior-to-senior-web-developer-roadmap/).
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Preview
+
+<img src="./resources/cat-friends.png" />
+
 ## To run this project
 
 1. Clone this repository and cd into it
